@@ -1,0 +1,43 @@
+.input-with-placeholder{
+    position: relative;
+    width:400px;
+}
+
+.input{
+    height: 48px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 5px;
+    padding: 16px 12px 4px;
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+}
+
+.placeholder-text{
+    position:absolute;
+    color: rgba(0,0,0,0.5);
+    background-color: transparent;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    padding:12px;
+    pointer-events: none;
+    font-size: 1rem;
+    transform-origin: top left;
+    transition: all 200ms ease-in-out;
+    
+}
+
+.input:focus{
+    font-size: 1rem;
+}
+
+.input-with-placeholder input:focus + .placeholder-text,
+.input-with-placeholder input:valid + .placeholder-text{
+    transform: translateY("100%");
+    scale: 0.7;
+    left:4px;
+    padding-top: 0;
+}
